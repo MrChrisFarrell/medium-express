@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Starting from Medium tutorial to learn Express",
   "scripts": {
-    "dev": "tsx --watch src/index.ts",
-    "start": "node dist/index.js",
+    "dev": "tsx --watch --env-file .env src/index.ts",
+    "start": "node --env-file .env dist/index.js",
     "build": "tsc",
     "type-check": "tsc --noEmit",
     "lint": "eslint .",
@@ -12,6 +12,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "imports": {
+    "#*": "./src/*"
   },
   "repository": {
     "type": "git",
