@@ -1,0 +1,47 @@
+{
+  "name": "medium-express",
+  "version": "1.0.0",
+  "description": "Starting from Medium tutorial to learn Express",
+  "scripts": {
+    "dev": "tsx --watch --env-file .env src/index.ts",
+    "start": "node --env-file .env dist/index.js",
+    "build": "tsc -p tsconfig.build.json",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest",
+    "test:run": "vitest --run",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest run --coverage"
+  },
+  "imports": {
+    "#*": "./src/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrChrisFarrell/medium-express.git"
+  },
+  "keywords": [],
+  "author": "Chris Farrell",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MrChrisFarrell/medium-express/issues"
+  },
+  "homepage": "https://github.com/MrChrisFarrell/medium-express#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.5",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "@vitest/coverage-v8": "^4.0.14",
+    "@vitest/eslint-plugin": "^1.5.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  }
+}
